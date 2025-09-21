@@ -31,6 +31,16 @@ parts:
       - file: advanced/index
       - file: advanced/advanced_python/index
       - file: advanced/advanced_numpy/index
+      - file: advanced/pandas/index
+        sections:
+        - file: advanced/pandas/0_0_pandas_intro
+        - file: advanced/pandas/0_1_to_loc_or_iloc
+        - file: advanced/pandas/0_2_pandas_dataframes_attributes_methods
+        - file: advanced/pandas/0_3_constructing_dataframes
+        - file: advanced/pandas/0_4_dealing_with_missing_data_in_pandas
+        - file: advanced/pandas/0_5_filtering_data_with_pandas
+        - file: advanced/pandas/0_6_more_pandas_methods_strings
+        - file: advanced/pandas/0_7_pandas_datetimes
       - file: advanced/debugging/index
       - file: advanced/optimizing/index
       - file: advanced/scipy_sparse/introduction

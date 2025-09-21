@@ -1,0 +1,4 @@
+# Pandas from Numpy
+
+We will now introduce the Pandas data science library, starting from the Numpy
+array library, on which Pandas is based.
