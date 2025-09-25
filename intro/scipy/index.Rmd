@@ -6,7 +6,7 @@ jupyter:
       extension: .Rmd
       format_name: rmarkdown
       format_version: '1.2'
-      jupytext_version: 1.17.2
+      jupytext_version: 1.17.3
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -727,6 +727,8 @@ $f(x, y) = (4 - 2.1x^2 + \frac{x^4}{3})x^2 + xy + (4y^2 - 4)y^2$
 has multiple local minima. Find a global minimum (there is more than one,
 each with the same value of the objective function) and at least one other
 local minimum.
+
+![](images/camel.png)
 
 Hints:
 
