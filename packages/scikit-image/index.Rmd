@@ -6,7 +6,7 @@ jupyter:
       extension: .Rmd
       format_name: rmarkdown
       format_version: '1.2'
-      jupytext_version: 1.16.6
+      jupytext_version: 1.17.3
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -47,21 +47,13 @@ masking and labeling are a prerequisite.
 Images are NumPy's arrays `np.ndarray`
 
 
-::: {glossary}
-
-Pixels
-    array values: ``a[2, 3]``
-
-Channels
-    array dimensions
-
-Image encoding
-    ``dtype`` (``np.uint8``, ``np.uint16``, ``np.float``)
-
-Filters
-    functions (``numpy``, ``skimage``, ``scipy``)
-
-:::
+|||
+|:---|:---|
+|Image|`np.ndarray`|
+|Pixels|array values e.g. `img_arr[2, 3]`|
+|Channels|array dimensions|
+|Image encoding |(`np.uint8`, `np.uint16`, `np.float`)|
+|Filters | functions (`numpy`, `skimage`, `scipy`)|
 
 ```{python}
 # This example show how to create a simple checkerboard.
@@ -78,30 +70,13 @@ Python installations, as well as in most Linux distributions. Other
 Python packages for image processing & visualization that operate on
 NumPy arrays include:
 
-::: {list-table} Other packages for working with images
-
-* - {mod}`scipy.ndimage`
-  - For N-dimensional arrays. Basic filtering, mathematical morphology,
-    regions properties
-* - [Mahotas](https://mahotas.readthedocs.io)
-  - With a focus on high-speed implementations.
-* - [Napari](https://napari.org)
-  - A fast, interactive, multi-dimensional image viewer built in Qt.
-
-:::
-
-Some powerful C++ image processing libraries also have Python bindings:
-
-::: {list-table} C++ libraries with Python bindings
-
-* - [OpenCV](https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html)
-  - A highly optimized computer vision library with a focus on real-time
-    applications.
-* - [ITK](https://www.itk.org)
-  - The Insight ToolKit, especially useful for registration and working with
-    3D images.
-
-:::
+| Library | Description |
+|---------|-------------|
+| scipy.ndimage | For N-dimensional arrays. Basic filtering, mathematical morphology, regions properties |
+|[Mahotas](https://mahotas.readthedocs.io) | With a focus on high-speed implementations.|
+|[Napari](https://napari.org) | A fast, interactive, multi-dimensional image viewer built in Qt.  |
+| [OpenCV](https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html) | A highly optimized computer vision library with a focus on real-time applications. |
+| [ITK](https://www.itk.org)  | The Insight ToolKit, especially useful for registration and working with 3D images. |
 
 To varying degrees, these C++-based libraries tend to be less Pythonic and
 NumPy-friendly.
@@ -117,39 +92,23 @@ The library contains predominantly image processing algorithms, but
 also utility functions to ease data handling and processing.
 It contains the following submodules:
 
-::: {list-table} Scikit-image submodules
-
-* - {mod}`color`
-  - Color space conversion.
-* - {mod}`data`
-  - Test images and example data.
-* - {mod}`draw`
-  - Drawing primitives (lines, text, etc.) that operate on NumPy arrays.
-* - {mod}`exposure`
-  - Image intensity adjustment, e.g., histogram equalization, etc.
-* - {mod}`feature`
-  - Feature detection and extraction, e.g., texture analysis corners, etc.
-* - {mod}`filters`
-  - Sharpening, edge finding, rank filters, thresholding, etc.
-* - {mod}`graph`
-  - Graph-theoretic operations, e.g., shortest paths.
-* - {mod}`io`
-  - Reading, saving, and displaying images and video.
-* - {mod}`measure`
-  - Measurement of image properties, e.g., region properties and contours.
-* - {mod}`metrics`
-  - Metrics corresponding to images, e.g. distance metrics, similarity, etc.
-* - {mod}`morphology`
-  - Morphological operations, e.g., opening or skeletonization.
-* - {mod}`restoration`
-  - Restoration algorithms, e.g., deconvolution algorithms, denoising, etc.
-* - {mod}`segmentation`
-  - Partitioning an image into multiple regions.
-* - {mod}`transform`
-  - Geometric and other transforms, e.g., rotation or the Radon transform.
-* - {mod}`util`
-  - Generic utilities.
-:::
+| Module | Description |
+|--------|-------------|
+| [`color`](https://scikit-image.org/docs/stable/api/skimage.color.html#module-skimage.color) | Color space conversion. |
+| [`data`](https://scikit-image.org/docs/stable/api/skimage.data.html#module-skimage.data) | Test images and example data. |
+| [`draw`](https://scikit-image.org/docs/stable/api/skimage.draw.html#module-skimage.draw) | Drawing primitives (lines, text, etc.) that operate on NumPy arrays. |
+| [`exposure`](https://scikit-image.org/docs/stable/api/skimage.exposure.html#module-skimage.exposure) | Image intensity adjustment, e.g., histogram equalization, etc. |
+| [`feature`](https://scikit-image.org/docs/stable/api/skimage.feature.html#module-skimage.feature) | Feature detection and extraction, e.g., texture analysis corners, etc. |
+| [`filters`](https://scikit-image.org/docs/stable/api/skimage.filters.html#module-skimage.filters) | Sharpening, edge finding, rank filters, thresholding, etc. |
+|[`graph`](https://scikit-image.org/docs/stable/api/skimage.graph.html#module-skimage.graph) | Graph-theoretic operations, e.g., shortest paths. |
+| [`io`](https://docs.python.org/3/library/io.html#module-io) | Reading, saving, and displaying images and video. |
+| [`measure`](https://scikit-image.org/docs/stable/api/skimage.measure.html#module-skimage.measure) | Measurement of image properties, e.g., region properties and contours. |
+| [`metric`](https://scikit-image.org/docs/stable/api/skimage.metrics.html#module-skimage.metrics) | Metrics corresponding to images, e.g. distance metrics, similarity, etc. |
+| [`morphology`](https://scikit-image.org/docs/stable/api/skimage.morphology.html#module-skimage.morphology) | Morphological operations, e.g., opening or skeletonization. |
+| [`restoration`](https://scikit-image.org/docs/stable/api/skimage.restoration.html#module-skimage.restoration) | Restoration algorithms, e.g., deconvolution algorithms, denoising, etc. |
+| [`segmentation`](https://scikit-image.org/docs/stable/api/skimage.segmentation.html#module-skimage.segmentation) | Partitioning an image into multiple regions. |
+| [`transform`](https://scikit-image.org/docs/stable/api/skimage.transform.html#module-skimage.transform) | Geometric and other transforms, e.g., rotation or the Radon transform. |
+| [`util`](https://scikit-image.org/docs/stable/api/skimage.util.html#module-skimage.util) | Generic utilities. |
 
 <!---
 TODO Edit this section with a more refined discussion of the various
@@ -389,7 +348,7 @@ camera_equalized = ski.exposure.equalize_hist(camera)
 
 Enhances contrast in large almost uniform regions.
 
-```{python}
+```{python tags=c("hide-input")}
 plt.figure(figsize=(7, 3))
 
 plt.subplot(121)
