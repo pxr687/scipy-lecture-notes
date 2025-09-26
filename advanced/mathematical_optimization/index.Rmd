@@ -8,7 +8,7 @@ jupyter:
       extension: .Rmd
       format_name: rmarkdown
       format_version: '1.2'
-      jupytext_version: 1.18.0-dev
+      jupytext_version: 1.17.3
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -91,10 +91,10 @@ on which the search is performed.
      :doc: optimization_examples.Rmd
      :::
 * - **A convex function**:
-
+      ______________________________
     - $f$ is above all its tangents.
-    - Equivalently, for two points $A, B$, $f(C)$ lies below the segment
-      $[f(A), f(B])]$, if $A < C < B$.
+    - Equivalently, for two points $A$ and $B$,<br>
+      $f(C)$ lies below the segment $[f(A), f(B])]$ if $A < C < B$.
 
   - **A non-convex function**
 
@@ -122,7 +122,7 @@ also a global minimum. Then, in some sense, the minimum is unique.
 
 * - **A smooth function**:
 
-    The gradient is defined everywhere, and is a continuous function
+    The gradient is defined everywhere,<br>and is a continuous function
 
   - **A non-smooth function**
 
@@ -247,7 +247,7 @@ gradient, that is the direction of the *steepest descent*.
 
 ::: {list-table} Fixed step gradient descent
 
-* - **A well-conditioned quadratic function.**
+* - **A well-conditioned <br> quadratic function.**
 
   - ::: {glue} gradient_descent_q_07_gd_func
     :doc: optimization_examples.Rmd
@@ -256,11 +256,14 @@ gradient, that is the direction of the *steepest descent*.
     :doc: optimization_examples.Rmd
     :::
 
-* - **An ill-conditioned quadratic function.**
+* - **An ill-conditioned <br> quadratic function.**
 
-    The core problem of gradient-methods on ill-conditioned problems is
-    that the gradient tends not to point in the direction of the
-    minimum.
+    The core problem of<br>
+    gradient-methods on <br>
+    ill-conditioned problems is that<br> 
+    the gradient tends <br>
+    not to point in the <br> 
+    direction of the minimum.
 
   - ::: {glue} gradient_descent_q_002_gd_func
     :doc: optimization_examples.Rmd
@@ -400,9 +403,10 @@ purpose, they rely on the 2 first derivative of the function: the
 ::: {list-table}
 
 * - **An ill-conditioned quadratic function:**
-
-    Note that, as the quadratic approximation is exact, the Newton
-    method is blazing fast
+   
+    Note that, as the quadratic<br>
+    approximation is exact, the<br>
+    Newton method is blazing fast<br>
 
   - ::: {glue} gradient_descent_q_002_ncg_func
     :doc: optimization_examples.Rmd
@@ -413,9 +417,12 @@ purpose, they rely on the 2 first derivative of the function: the
 
 * - **An ill-conditioned non-quadratic function:**
 
-    Here we are optimizing a Gaussian, which is always below its
-    quadratic approximation. As a result, the Newton method overshoots
-    and leads to oscillations.
+    Here we are optimizing a<br>
+    Gaussian, which is always<br>
+    below its quadratic<br>
+    approximation. As a result,<br>
+    the Newton method overshoots<br>
+    and leads to oscillations.<br>
 
   - ::: {glue} gradient_descent_g_002_ncg_func
     :doc: optimization_examples.Rmd
@@ -481,10 +488,10 @@ each step an approximation of the Hessian.
 
 ::: {list-table}
 
-* - **An ill-conditioned quadratic function:**
+* - **An ill-conditioned<br>quadratic function:**
 
-    On a exactly quadratic function, BFGS is not as fast as Newton's
-    method, but still very fast.
+    On a exactly quadratic function,<br> BFGS is not as fast as Newton's
+    <br> method, but still very fast.
 
   - ::: {glue} gradient_descent_q_002_bgfs_func
     :doc: optimization_examples.Rmd
@@ -493,10 +500,12 @@ each step an approximation of the Hessian.
     :doc: optimization_examples.Rmd
     :::
 
-* - **An ill-conditioned non-quadratic function:**
+* - **An ill-conditioned<br>non-quadratic function:**
 
-    Here BFGS does better than Newton, as its empirical estimate of the
-    curvature is better than that given by the Hessian.
+    Here BFGS does better than Newton,<br>
+    as its empirical estimate of the <br>
+    curvature is better than that<br>
+    given by the Hessian.
 
   - ::: {glue} gradient_descent_g_002_bgfs_func
     :doc: optimization_examples.Rmd
@@ -505,7 +514,7 @@ each step an approximation of the Hessian.
     :doc: optimization_examples.Rmd
     :::
 
-* - **An ill-conditioned very non-quadratic function:**
+* - **An ill-conditioned<br>very non-quadratic function:**
 
   - ::: {glue} gradient_descent_rb_bgfs_func
     :doc: optimization_examples.Rmd
